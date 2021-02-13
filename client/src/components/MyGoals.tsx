@@ -13,7 +13,7 @@ const MyGoals: React.FC<Props> = ({goals}) => {
     return (
     <React.Fragment>
         <h2>My Goals</h2>
-        {goals.map(goal => <GoalCard title={goal.title} />)}
+        {goals.map(goal => <GoalCard key={goal.title} title={goal.title} />)}
     </React.Fragment>
     );
 }

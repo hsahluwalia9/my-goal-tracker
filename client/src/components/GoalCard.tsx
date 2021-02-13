@@ -8,6 +8,8 @@ const GoalCard: React.FC<Props> = ({title}) => {
     return (
         <React.Fragment>
             <span>{title}</span>
+            <br />
+            <br />
         </React.Fragment>
     )
 }
