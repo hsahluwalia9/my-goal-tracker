@@ -1,0 +1,16 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "newuser",
+    "password": "password",
+    "database": "goalsdb",
+    "synchronize": true,
+    "logging": false,
+    "entities": [
+       "src/entity/**/*.ts"
+    ],
+    "migrations": [
+       "src/migration/**/*.ts"
+    ]
+ }
