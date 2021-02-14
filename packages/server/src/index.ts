@@ -15,6 +15,7 @@ interface IGoal {
 }
 
 app.get("/goals", async (_req: any, res: { json: (arg0: IGoal[]) => void }) => {
+  console.log('entering GET goals endpoint');
   let goals = await getConnection().getRepository(Goal).find();
   return res.json(goals);
 });
