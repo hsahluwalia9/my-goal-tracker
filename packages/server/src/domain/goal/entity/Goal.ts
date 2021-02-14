@@ -7,4 +7,13 @@ export class Goal extends BaseEntity {
 
     @Column()
     title: string;
+
+    @Column({default: ""})
+    description: string;
+
+    @Column({default: new Date()})
+    dateCreated: Date
+
+    @Column({default: ""})
+    createdBy: string;
 }
