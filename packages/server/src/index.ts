@@ -1,4 +1,5 @@
 import express from 'express';
+import bodyparser from 'body-parser';
 import cors from 'cors';
 import 'reflect-metadata';
 import goalRouter from './domain/goal/routes';
@@ -7,6 +8,7 @@ import { createConnection } from 'typeorm';
 // Initialize express server
 const app = express();
 app.use(cors());
+app.use(bodyparser.json());
 app.use(goalRouter);
 
 const port = process.env.port || 5000;
