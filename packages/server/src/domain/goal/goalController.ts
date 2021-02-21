@@ -1,14 +1,14 @@
 import { getConnection } from 'typeorm';
 import { Goal } from './entity/Goal';
 
-interface GoalRequestBody {
+interface CreateGoalRequestBody {
   title: string;
   description: string;
   createdBy: string;
 }
 
 type GetGoalsFunc = () => Promise<Array<Goal>>;
-type CreateGoalFunc = (goalRequestBody: GoalRequestBody) => Promise<Goal>;
+type CreateGoalFunc = (goalRequestBody: CreateGoalRequestBody) => Promise<Goal>;
 
 export const getGoals: GetGoalsFunc = async () => {
   let goalsPromise = await getConnection()
